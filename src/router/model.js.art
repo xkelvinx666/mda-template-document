@@ -5,7 +5,7 @@
  * @apiGroup <%= capitalizeName %>API
  *
 <% for(field of model.fields){ %>
- * @apiSuccess {<%= field.type %>} <%= field.name %> <%= field.description %>.
+ * @apiSuccess {<%= field.content.type %>} <%= field.name %> <%= field.content.description %>.
 <% } %>
  *
  * @apiSuccessExample Success-Response:
@@ -14,7 +14,7 @@
  *       'data': [
  *     <% for(field of model.fields){ %>
  *       {
- *     <%= field.name %>: <%= field.type %>
+ *     <%= field.name %>: <%= field.content.type %>
  *       },
  *     <% } %>
  *       ],
@@ -46,7 +46,7 @@
  * @apiGroup <%= capitalizeName %>API
  *
  <% for(field of model.fields){ %>
- * @apiParam {<%= field.type %>} <%= field.name %> <%= field.description %>.
+ * @apiParam {<%= field.content.type %>} <%= field.name %> <%= field.content.description %>.
  <% } %>
  *
  * @apiSuccessExample Success-Response:
@@ -59,7 +59,7 @@
  * @apiGroup <%= capitalizeName %>API
  *
  <% for(field of model.fields){ %>
- * @apiParam {<%= field.type %>} <%= field.name %> <%= field.description %>.
+ * @apiParam {<%= field.content.type %>} <%= field.name %> <%= field.content.description %>.
  <% } %>
  *
  * @apiSuccessExample Success-Response:
