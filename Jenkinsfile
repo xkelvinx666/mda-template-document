@@ -79,7 +79,6 @@ pipeline {
     stage('after-publish') {
        steps {
         sshCommand remote: remote, command: "cd ~/template && tar -xzvf document.tar && rm -rf document && mv template document && rm document.tar"
-        sshCommand remote: remote, command: "cd ~/template/document && pm2 start npm -- run start"
       }
     }
   }
