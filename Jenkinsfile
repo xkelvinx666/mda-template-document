@@ -33,7 +33,6 @@ pipeline {
     }
     stage('compile') {
       steps {
-        sh 'ip addr show docker0'
         sh 'ip route show'
         sh 'ifconfig'
         sh 'cd ./render && npm run template art ../template 1'
